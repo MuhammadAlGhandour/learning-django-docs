@@ -61,6 +61,11 @@ def create_choice(question, choice_text):
 
 
 class QuestionIndexViewTests(TestCase):
+
+    '''
+    EVERY TEST FUNCTION THAT HAS PAST QUESTION IN IT GIVES AN ERROR THAT THE CONTEXT IS EMPTY
+    '''
+    
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
