@@ -19,6 +19,8 @@ class IndexView(generic.ListView):
         Return the published questions (not including those set to be published in the future + the questions without choices)
         '''
         # here's the code i wrote to exclude the questions without choices
+        # the logic works fine when i run the server, but in tests.py doesn't work
+        # BY THE WAY i made the ordering of the questions using "class Meta" in models.py file go check it out
         # the old line was "return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")"
         questions_list = []
         for question in Question.objects.all():
